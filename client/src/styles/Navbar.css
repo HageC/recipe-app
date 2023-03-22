@@ -1,3 +1,84 @@
+.nav {
+  display: flex;
+  background-color: #ed1703;
+  height: 4rem;
+  align-items: center;
+}
+
+@media screen and (max-width: 740px) {
+  .nav-logo {
+    display: none;
+  }
+}
+
 .nav-container {
-  background-color: steelblue;
+  margin: 0 auto;
+  width: 90rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.nav-logo {
+  color: #ffff;
+  padding-left: 1rem;
+}
+
+.nav-logo img {
+  width: 250px;
+}
+
+.nav-links {
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-link {
+  padding: 0 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: #fffa;
+  transition: 0.5s;
+  text-decoration: underline;
+}
+
+.nav-register {
+  padding-right: 1rem;
+  width: 250px;
+}
+
+.nav-btns {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-btns * {
+  border-radius: 0.2rem;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+}
+
+.signup-btn {
+  background-color: #0066ff;
+  box-shadow: rgba(255, 255, 255, 0) 0 0 0 3px, rgba(0, 102, 255, 0) 0 0 0 4px;
+  cursor: pointer;
+}
+
+.signup-btn:hover {
+  background-color: #0052cc;
+  transition: 1s;
+}
+
+.login-btn {
+  cursor: pointer;
+}
+.login-btn:hover {
+  color: #fffa;
+  transition: 0.5s;
+  text-decoration: underline;
 }
