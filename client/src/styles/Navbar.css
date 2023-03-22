@@ -1,4 +1,9 @@
+.main {
+  padding: 5rem;
+}
+
 .nav {
+  color: #fff;
   display: flex;
   background-color: #ed1703;
   height: 4rem;

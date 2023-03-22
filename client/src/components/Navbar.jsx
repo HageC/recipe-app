@@ -23,8 +23,9 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-
-      <Outlet />
+      <div className="main">
+        <Outlet />
+      </div>
     </>
   );
 };

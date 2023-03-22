@@ -10,7 +10,6 @@ app.use(express.json());
 
 app.get("/api/:type/:method", async (req, res) => {
   const { type, method } = req.params;
-
   try {
     const response = await axios.get(
       `https://api.spoonacular.com/${type}/${method}?apiKey=${process.env.apiKey}`,
@@ -19,7 +18,21 @@ app.get("/api/:type/:method", async (req, res) => {
 
     res.send(response.data);
   } catch (error) {
-    res.json({ error: error.message });
+    res.json({ error: error });
+  }
+});
+
+app.get("/api/:type/:id/:method", async (req, res) => {
+  const { type, method, id } = req.params;
+  try {
+    const response = await axios.get(
+      `https://api.spoonacular.com/${type}/${id}/${method}?apiKey=${process.env.apiKey}`,
+      { params: req.query }
+    );
+
+    res.send(response.data);
+  } catch (error) {
+    res.json({ error: error });
   }
 });
 

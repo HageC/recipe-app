@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   border: 0;
-  color: #ffff;
+
   box-sizing: border-box;
   text-align: center;
 }
@@ -27,4 +27,8 @@ body {
 ol,
 ul {
   list-style: none;
+}
+
+#root {
+  height: 100vh;
 }

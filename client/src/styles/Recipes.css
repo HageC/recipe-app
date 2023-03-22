@@ -1,0 +1,9 @@
+.recipes-container {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.recipes-results {
+  text-align: left;
+}
