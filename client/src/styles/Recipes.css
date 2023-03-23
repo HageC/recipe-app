@@ -1,9 +1,17 @@
 .recipes-container {
   width: 100%;
-  max-width: 700px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .recipes-results {
+  margin: 0 auto;
   text-align: left;
+}
+
+.recipes-grid {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1rem;
 }

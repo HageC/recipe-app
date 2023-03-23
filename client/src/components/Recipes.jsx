@@ -6,6 +6,7 @@ const Recipes = () => {
     <div className="recipes">
       <div className="recipes-container">
         <div className="recipes-results">Results:</div>
+        <div className="recipes-grid"></div>
       </div>
     </div>
   );
