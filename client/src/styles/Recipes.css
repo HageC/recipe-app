@@ -5,6 +5,8 @@
 }
 
 .recipes-results {
+  font-size: 1.2rem;
+  font-weight: 600;
   margin: 0 auto;
   text-align: left;
 }
