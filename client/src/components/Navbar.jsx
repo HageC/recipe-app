@@ -1,5 +1,5 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import "../styles/Navbar.css";
 
 const Navbar = () => {
@@ -8,10 +8,22 @@ const Navbar = () => {
       <div className="nav">
         <div className="nav-container">
           <div className="nav-logo">
-            <img src="/AppLogo.png" alt="" />
+            <Link
+              style={{ color: "inherit", textDecoration: "inherit" }}
+              to={"/"}
+            >
+              <img src="/AppLogo.png" alt="" />
+            </Link>
           </div>
           <div className="nav-links">
-            <div className="nav-link">Home</div>
+            <div className="nav-link">
+              <Link
+                style={{ color: "inherit", textDecoration: "inherit" }}
+                to={"/"}
+              >
+                Home
+              </Link>
+            </div>
             <div className="nav-link">About</div>
             <div className="nav-link">Credits</div>
           </div>

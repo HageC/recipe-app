@@ -17,7 +17,6 @@ const useFetch = (query) => {
 
       setRecipes(response.data);
     } catch (error) {
-      console.log(error);
       setError({ msg: error.error, error: true });
     }
   };
