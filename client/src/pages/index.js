@@ -1,3 +1,3 @@
 import Home from "./Home";
-import Recipe from "./Recipe";
+import Recipe from "./RecipePage";
 export { Home, Recipe };

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { Loading } from "../components";
+import "../styles/RecipePage.css";
 const Recipe = () => {
   const { id } = useParams();
   const [isLoading, setIsLoading] = useState(false);
@@ -15,7 +17,6 @@ const Recipe = () => {
       );
       setRecipe(response.data);
     } catch (error) {
-      console.log(error);
       setError({ msg: error.error, error: true });
     }
     setIsLoading(false);
@@ -24,7 +25,20 @@ const Recipe = () => {
   useEffect(() => {
     fetchRecipe(id);
   }, []);
-  return <div>Recipe</div>;
+
+  if (isLoading) {
+    return <Loading />;
+  }
+
+  if (error.error) {
+    return <div className="recipes-error">{error.msg}</div>;
+  }
+  return (
+    <div
+      className="recipe-info"
+      dangerouslySetInnerHTML={{ __html: recipe.summary }}
+    ></div>
+  );
 };
 
 export default Recipe;
