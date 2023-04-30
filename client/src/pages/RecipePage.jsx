@@ -34,10 +34,16 @@ const Recipe = () => {
     return <div className="recipes-error">{error.msg}</div>;
   }
   return (
-    <div
-      className="recipe-info"
-      dangerouslySetInnerHTML={{ __html: recipe.summary }}
-    ></div>
+    <>
+      <div className="recipe-header">{recipe.title}</div>
+      <div className="recipe-page-img">
+        <img src={recipe.image} alt="" />
+      </div>
+      <div
+        className="recipe-info"
+        dangerouslySetInnerHTML={{ __html: recipe.summary }}
+      ></div>
+    </>
   );
 };
 

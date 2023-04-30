@@ -3,4 +3,17 @@
   margin: 0 auto;
   font-size: 1.3rem;
   max-width: 1400px;
+  padding-top: 2rem;
+}
+
+.recipe-page-img img {
+  border: solid 2px black;
+  width: 700px;
+  height: 100%;
+}
+
+.recipe-header {
+  font-size: 3.5rem;
+  font-weight: bold;
+  padding-bottom: 2rem;
 }
